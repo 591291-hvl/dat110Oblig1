@@ -30,9 +30,18 @@ public class MessagingServer {
 
 		// TODO - START
 		// accept TCP connection on welcome socket and create connection
+		
+		
+		//todo: this needs some kind of loop, waiting for connection?
+		try {
+			connection = new Connection(welcomeSocket.accept());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
+//		if (true)
+//			throw new UnsupportedOperationException(TODO.method());
 		
 		// TODO - END
 		

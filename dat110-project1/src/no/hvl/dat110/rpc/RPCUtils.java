@@ -6,6 +6,7 @@ import no.hvl.dat110.TODO;
 
 public class RPCUtils {
 	
+	
 	public static byte[] encapsulate(byte rpcid, byte[] payload) {
 		
 		byte[] rpcmsg = null;
@@ -13,6 +14,8 @@ public class RPCUtils {
 		// TODO - START
 		
 		// Encapsulate the rpcid and payload in a byte array according to the  RPC message syntax
+		
+		
 		
 		if (true)
 			throw new UnsupportedOperationException(TODO.method());
@@ -45,8 +48,6 @@ public class RPCUtils {
 		
 		// TODO - START 
 		
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
 		
 		// TODO - END
 		
@@ -59,8 +60,7 @@ public class RPCUtils {
 		
 		// TODO - START 
 		
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
+		decoded = new String(data);
 		
 		// TODO - END
 		
@@ -117,9 +117,9 @@ public class RPCUtils {
 		
 		// TODO - START 
 		
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
-		
+		ByteBuffer bytebuffer = ByteBuffer.putInt(x);
+		encoded = new byte[bytebuffer.remaining()];
+		bytebuffer.get(encoded);
 		// TODO - END
 		
 		return encoded;
@@ -132,8 +132,10 @@ public class RPCUtils {
 		
 		// TODO - START 
 		
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
+		
+		
+//		if (true)
+//			throw new UnsupportedOperationException(TODO.method());
 		
 		// TODO - END
 		
