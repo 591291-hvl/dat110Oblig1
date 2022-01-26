@@ -21,19 +21,19 @@ public class MessageUtils {
 		// encapulate/encode the payload data of the message and form a segment
 		// according to the segment format for the messagin layer
 		
+		if(message.getData() == null) {
+			return segment;
+		}
+		
 		data = message.getData();
 		int size = data.length;
 		segment = new byte[SEGMENTSIZE];
 		
 		segment[0] = (byte)size;
-		int i = 1;
-		for(; i <= size; i++) {
+		
+		for(int i = 1; i <= size; i++) {
 			segment[i] = data[i-1];
 		}
-		
-		
-//		if (true)
-//			throw new UnsupportedOperationException(TODO.method());
 			
 		// TODO - END
 		return segment;

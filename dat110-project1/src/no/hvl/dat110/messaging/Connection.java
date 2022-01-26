@@ -38,7 +38,6 @@ public class Connection {
 		
 		// TODO - START
 		// encapsulate the data contained in the message and write to the output stream
-		
 		data = MessageUtils.encapsulate(message);
 		try {
 			outStream.write(data);
@@ -64,7 +63,7 @@ public class Connection {
 		
 		try {
 			data = new byte[128];
-			for(int i = 0; i < 128; i++) {
+			for(int i = 0; i < data.length; i++) {
 				data[i] = inStream.readByte();
 			}
 			message = MessageUtils.decapsulate(data);
